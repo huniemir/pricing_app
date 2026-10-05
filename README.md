@@ -1,4 +1,8 @@
-# 1. Uproszczenia
+# Jak wpiąłbym tę wycenę w sklep oparty na PrestaShop?
+
+Do PrestaShop dopisałbym osobny moduł zapewniający formularz dla użytkownika, który komunikowałby się z API wyceny. Frontend przesyłałby format, papier, nakład i termin realizacji i nie obliczałby ceny samodzielnie. W API należałoby też zadbać o odpowiednią autentyfikację oraz integrację z systemem użytkowników w PrestaShop, aby wyświetlać cenę netto dla klientów B2B i odpowiednio naliczać rabat lojalnościowy.
+
+# 1. Zastosowane uproszczenia
 
 Na potrzeby zadania przyjmowałem następujące uproszczenia:
 
@@ -6,7 +10,7 @@ Na potrzeby zadania przyjmowałem następujące uproszczenia:
 - Pomijam autentyfikację w endpointach.
 - Klienta identyfikuję poprzez parametr customerId
 
-# 3. Uruchamianie aplikacji
+# 2. Uruchamianie aplikacji
 
 uruchomienie kontenerów
 
@@ -16,7 +20,7 @@ instalowanie zależności:
 
 ```docker exec symfony_app composer install```
 
-# 2. Struktura aplikacji
+# 3. Struktura aplikacji
 
 ```text
 app/
@@ -77,9 +81,11 @@ app/
 
 `data/price-list.json` - cennik
 
-# 3. Przykładowe requesty
+# 4. Przykładowe requesty
 
 ## POST /api/price/quote
+
+Wykonuje wycenę i zapisuje ją
 
 Przykład:
 
@@ -157,7 +163,7 @@ Zwraca aktualny cennik.
 
 ## PUT /api/price-list/{format}/{paper}
 
-Aktualizuje cenę.
+Aktualizuje cenę w cenniku.
 
 Przykład:
 
@@ -181,7 +187,7 @@ PUT /api/price-list/A4/Kreda%20170%20g
 }
 ```
 
-# 4. Testy
+# 5. Testy
 
 ## Wszystkie testy
 
