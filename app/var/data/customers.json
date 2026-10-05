@@ -1,0 +1,18 @@
+{
+    "1": {
+        "loyaltyCustomer": true,
+        "b2b": true
+    },
+    "2": {
+        "loyaltyCustomer": true,
+        "b2b": false
+    },
+    "3": {
+        "loyaltyCustomer": false,
+        "b2b": true
+    },
+    "4": {
+        "loyaltyCustomer": false,
+        "b2b": false
+    }
+}

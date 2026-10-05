@@ -1,0 +1,22 @@
+{
+    "A6": {
+        "Kreda 130 g": 19,
+        "Kreda 170 g": 23,
+        "Offset 90 g": 15
+    },
+    "DL": {
+        "Kreda 130 g": 24,
+        "Kreda 170 g": 29,
+        "Offset 90 g": 19
+    },
+    "A5": {
+        "Kreda 130 g": 32,
+        "Kreda 170 g": 38,
+        "Offset 90 g": 26
+    },
+    "A4": {
+        "Kreda 130 g": 58,
+        "Kreda 170 g": 69,
+        "Offset 90 g": 47
+    }
+}
