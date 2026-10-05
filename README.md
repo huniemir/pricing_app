@@ -66,7 +66,9 @@ app/
 
 
 `data/customers.json` - plik przechowujący informacje o klientach (czy są b2b, czy są stałymi klientami)
+
 `data/orders.json` - archiwum zamówień
+
 `data/price-list.json` - cennik
 
 # 3. Przykładowe requesty
