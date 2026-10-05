@@ -1,0 +1,44 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: symfony_app
+    working_dir: /var/www/html
+    volumes:
+      - ./app:/var/www/html
+    environment:
+      APP_ENV: dev
+      DATABASE_URL: mysql://symfony:symfony@database:3306/symfony?serverVersion=mariadb-11.8.9&charset=utf8mb4
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+
+  database:
+    image: mariadb:11.8
+    container_name: symfony_database
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: symfony
+      MARIADB_USER: symfony
+      MARIADB_PASSWORD: symfony
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - database_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  adminer:
+    image: adminer:5
+    container_name: symfony_adminer
+    restart: unless-stopped
+    depends_on:
+      - database
+
+volumes:
+  database_data:
