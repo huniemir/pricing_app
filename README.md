@@ -8,6 +8,10 @@ Na potrzeby zadania przyjmowałem następujące uproszczenia:
 
 # 3. Uruchamianie aplikacji
 
+instalowanie zależności:
+
+``` docker exec symfony_app composer install ```
+
 ```docker compose up```
 
 # 2. Struktura aplikacji
