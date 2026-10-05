@@ -2,7 +2,7 @@
 
 Na potrzeby zadania przyjmowałem następujące uproszczenia:
 
-- Cennik przechowuję w pliku JSON zamiast w bazie danych.
+- Dane (cennik, archiwum zamówień, baza klientów) przechowuję w pliku JSON zamiast w bazie danych.
 - Pomijam autentyfikację w endpointach.
 - Klienta identyfikuję poprzez parametr customerId
 
