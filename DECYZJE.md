@@ -63,7 +63,7 @@ Przyjmuję założenie, że cennik jest przechowywany w jakiejś bazie danych/pl
 
 Przyjmuję założenie, że dostaję pełny zestaw danych bez gotowej kwoty (i tak ona mi nic nie daje)
 
-- Kierownik sprzedazy nie wspomina Czy rabatowania dla zamówień ekspres.
+- Kierownik sprzedazy nie wspomina o braku rabatowania dla zamówień ekspres.
 
 Przyjmuję założenie, że zamówień ekspres nie rabatujemy w żaden sposób skoro się to nie opłaca
 
