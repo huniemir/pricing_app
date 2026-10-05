@@ -2,11 +2,15 @@
 
 Na potrzeby zadania przyjmowałem następujące uproszczenia:
 
-- Cennik przechowuję w pliku JSON zamiast w bazie danych.
+- Dane (cennik, archiwum zamówień, baza klientów) przechowuję w pliku JSON zamiast w bazie danych.
 - Pomijam autentyfikację w endpointach.
 - Klienta identyfikuję poprzez parametr customerId
 
 # 3. Uruchamianie aplikacji
+
+instalowanie zależności:
+
+``` docker exec symfony_app composer install ```
 
 ```docker compose up```
 
@@ -66,7 +70,9 @@ app/
 
 
 `data/customers.json` - plik przechowujący informacje o klientach (czy są b2b, czy są stałymi klientami)
+
 `data/orders.json` - archiwum zamówień
+
 `data/price-list.json` - cennik
 
 # 3. Przykładowe requesty

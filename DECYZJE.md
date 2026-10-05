@@ -69,6 +69,6 @@ Przyjmuję założenie, że zamówień ekspres nie rabatujemy w żaden sposób s
 
 # Na potrzeby zadania przyjmuję następujące uproszczenia
 
-- Cennik przechowuję w pliku json zamiast w bazie danych
+- Dane przechowuję w pliku json zamiast w bazie danych
 - Pomijam autentyfikację w enpointach
 - Klienta identyfikuję poprzez parametr customerId
